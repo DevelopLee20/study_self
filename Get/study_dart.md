@@ -237,3 +237,180 @@ var today = rainy ? 'umbrella' : 'nothing';
 > 'rainy'값이 참일때 'today'값은 'umbrella' 거짓일때 'nothing'값을 가진다.
 
 ### 스위치 케이스 부터 ppt 2, 28 부터
+
+---
+
+## Switch case
+
+```dart
+enum status {A,B,C,D}
+
+void main(){
+    var status = Status.A;
+    Switch(status){
+        case Status.A;
+            print('A');
+            break;
+        case Status.B;
+            print('B');
+            break;
+        case Status.C;
+            print('C');
+            break;
+        case Status.D;
+            print('D');
+            break;
+    }
+}
+```
+
+---
+
+## for 문
+
+```dart
+var items = ['A','B','C'];
+
+for (var i = 0; i < items.length; i++){
+    print(items[i]);
+}
+```
+
+---
+
+## While 문
+
+```dart
+var i = 0;
+
+while(i<10){
+    print('$i');
+    i++;
+}
+```
+
+---
+
+## do while 문
+
+```dart
+var i = 0;
+
+do{
+    print('$');
+    i++;
+}while(i<10)
+```
+
+---
+
+## Class 클래스
+
+```dart
+class Person{ // 인스턴스
+    String name; // 프로퍼티 - 스트링형 변수를 프로퍼티로 가진다.
+    int age; // 프로퍼티
+
+    void add(){ // 메서드
+        age++;
+    }
+}
+
+var a = new Person();
+var b = Person(); // new 키워드 생략
+
+a.age = 10;
+b.name = '인규';
+```
+
+> 클래스를 통해 생성되는 객체 = 인스턴스
+>
+> 클래스 안에 있는 속성(변수 등)은 프로퍼티 (property) 라고 합니다.
+>
+> 클래스 내부에 있는 함수를 메서드라고 합니다.
+
+---
+
+## 접근 지정자
+
+```dart
+// case 1
+class Person{
+    String name;
+    int age;
+}
+
+var p = Person();
+p.age = 10;
+```
+
+```dart
+// case 2
+class Person{
+    String name;
+    int _age;
+}
+
+var p = Person();
+p._age = 10;
+}
+```
+
+> 위의 코드처럼 변수 앞에 _ 가 있을 경우 접근 불가하다.
+>
+> 이를 프라이빗 변수라고 부르며, 클래스가 정의되어 있지 않은 다른 파일에서 접근이 불가능합니다.
+
+---
+
+## 생성자
+
+```dart
+class Person{
+    String name;
+    int age;
+
+    Person(this.name, this.age); // 사용자 정의 생성자
+}
+
+var p = Person('인규', 10); // 생성자
+var p = Person(); // 기본 생성자
+```
+
+> 사용자 정의 생성자를 추가할 경우 기본 생성자를 사용할 수 없습니다.
+>
+> @@@@ 여기 모르겠어요.
+> ppt 39페이지 가로 사이 내용
+
+---
+
+## 게터, 세터 - 파이썬 모듈 느낌
+
+```dart
+// person.dart
+class Person{
+    String name;
+    int _age;
+
+    int get age => _age;
+}
+```
+
+```dart
+// main.dart - 실행 파일
+import 'Person.dart'
+
+var p = Person(); // @@@@ 여기 모르겠어요. 메소드 형식이 아닌가요? ppt 40페이지
+print(p.age);
+```
+
+---
+
+## 열거 타입
+
+```dart
+Enum Status { login, logout } // 열거 타입 선언
+
+var a = Status.logout; // 변수에 할당
+```
+
+---
