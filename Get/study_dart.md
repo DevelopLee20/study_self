@@ -414,3 +414,78 @@ var a = Status.logout; // 변수에 할당
 ```
 
 ---
+
+## Map
+
+```dart
+main(){
+    Map<int, String> testMap = {
+        1: 'Red',
+        2: 'Orange',
+        3: 'Yellow'
+    };
+    testMap[4] = 'Green';
+
+    print(testMap);
+    print(testMap[1]);
+    print(testMap[5]);
+}
+```
+
+> Key 와 Value 로 구성되며 키는 중복되지 않고 값은 중복 가능하다.
+
+---
+
+## Set
+
+```dart
+main(){
+    Set<dynamic> testSet = {1, 2.5, 'test'};
+    testSet.add(1);
+    testSet.add('korea');
+
+    print('-------Start of testSet-------');
+    for (dynamic each in testSet){
+        print(each);
+    }
+    print('------Start of testSet-------');
+}
+```
+
+> 데이터 순서가 없고, 중복을 허용하지 않음
+>
+> 집합이라고 생각하면 된다.
+
+## List
+
+```dart
+main(){
+    List<dynamic> list1 = {1, 2.5, 'test'};
+    dynamic list2 = {1, 2.5, 'test'};
+    list2 = 1;
+    var list3 = {1, 2.5, 'test'};
+
+    print(list[1]);
+}
+```
+
+> 데이터의 순서가 있고, 중복을 허용한다.
+>
+> 다양한 프로퍼티가 존재한다.
+
+```txt
+indexOf(요소) : 요소의 인덱스를 리턴
+add(데이터) : 데이터 추가
+addAll([데이터]) : 여러 데이터 추가
+remove(요소) : 요소 삭제
+removeAt(인덱스) : 지정한 인덱스의 요소 삭제
+contains(요소) : 요소가 포함되어있으면 true, 아니면 false
+clear() : 리스트 전체 요소 삭제
+sort() : 리스트 정렬
+first : 리스트 첫번째 요소
+last : 리스트 마지막 요소
+reversed : 역순으로 정렬
+isNotEmpty : 비어있으면 False, 안 비어있으면 True
+isEmpty : 비어있으면 true, 안 비어있으면 False
+single : 리스트에 단 1개의 요소만 있으면 해당 요소 리턴
+```
