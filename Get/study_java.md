@@ -78,6 +78,78 @@ System.out.println(b); // 3.14
 System.out.println(c); // 3.14
 ```
 
-### 실수형은 기본적으로 double 형이다.  그래서 float 형을 선언해서 초기화 할때는 double 형이 아닌 float 형으로 선언하겠다는 F or f 식별자를 표시해주어야 한다
+> 실수형은 기본적으로 double 형이다.  그래서 float 형을 선언해서 초기화 할때는 double 형이 아닌 float 형으로 선언하겠다는 F or f 식별자를 표시해주어야 한다
+
+---
+
+## 리스트, 배열의 길이
+
+```python
+#python
+s = []
+len(s)
+```
+
+```java
+//java
+int[] s = new int[10];
+int[] score = {10,20,30,40};
+s.length;
+```
+
+---
+
+## 배열 인자 하나씩 호출
+
+```python
+#python
+s = [1,2,3,4,5,6]
+for i in s:
+    print(s)
+```
+
+```java
+//java
+int[] s = {1,2,3,4,5};
+for (int value : s){
+    System.out.println(value+" ");
+}
+```
+
+---
+
+## 배열의 모든 요소 출력
+
+```python
+#python
+s = [10,20,30]
+print(s)
+```
+
+```java
+//java
+int[] s = {10,20,30};
+System.out.println(Arrays.toString(number));
+```
+
+---
+
+## 자바의 ArrayList = 파이썬의 list와 같다
+
+```java
+import java.util.*;
+
+public class First_java{
+    public static void main(String args[]) {
+        ArrayList<String> list=new ArrayList<>();
+        list.add("인규");
+        list.add("감자");
+        list.add("사과");
+        for(String obj:list) {
+            System.out.print(obj+" ");
+        }
+    }
+}
+```
 
 ---
