@@ -153,3 +153,30 @@ public class First_java{
 ```
 
 ---
+
+## 객체지향언어
+
+```java
+class Calculator{
+
+    int plus(int a,int b) {
+        return a+b;
+    }
+    int minus(int a, int b) {
+        return a-b;
+    }
+}
+
+public class First_java{
+    public static void main(String[] args) {
+        Calculator obj1 = new Calculator();
+
+        int one = obj1.plus(10, 20);
+        int two = obj1.minus(30, 20);
+        System.out.println(one);
+        System.out.println(two);
+    }
+}
+```
+
+---
