@@ -180,3 +180,16 @@ public class First_java{
 ```
 
 ---
+
+## String[] args 와 String args[] 의 차이점
+
+```java
+String[] args
+String args[]
+```
+
+> <https://stackoverflow.com/questions/13175193/java-array-convention-string-args-vs-string-args>
+>
+> 결론적으론 없다.
+
+---
