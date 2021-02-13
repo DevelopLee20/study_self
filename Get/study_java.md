@@ -202,3 +202,37 @@ String args[]
 > 결론적으론 없다.
 
 ---
+
+## 메소드 오버리딩(오버라이딩)
+
+```java
+class Mymath{
+    int square(int i){ // square 라는 메소드 생성
+        return i * i;
+    }
+
+    double square(double i){ // square 라는 메소드를 중복 생성, 이때 매개변수는 다르게 설정해야한다.
+        return i * i;
+    }
+
+    int square(){
+        return 30 * 30;
+    }
+}
+
+public class Page_130 {
+    public static void main(String[] args){
+    
+        System.out.println(obj.square(10));
+        System.out.println(obj.square(3.14));
+        System.out.println(obj.square());
+        // 매개변수에 맞는 메소드가 호출되어 사용된다.
+    }
+}
+```
+
+> 메소드 오버리딩을 통해서 중복되는 메소드를 형성할 수 있도록 한다.
+>
+> 이때 매개변수는 달라야 한다.
+>
+> 매개변수가 없을 때는 없는 메소드가 호출된다.

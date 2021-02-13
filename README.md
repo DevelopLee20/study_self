@@ -2,11 +2,11 @@
 
 - Dart
   
-> DSC
+> DSC, 플러터 앱 프로그래밍
 
 - Java
   
-> 책
+> Power java, 자바 프로그래밍 입문
 
 - Num
   
@@ -18,7 +18,19 @@
 
 - Get
 
-> 개념정리 모음
+> 개념정리 모음 - 내가 모르는 것들 위주로
+
+- Machine_Learning
+
+> 머신 러닝
+
+- Doit_Python
+
+> 점프 투 파이썬 맨 뒤에 문제들
+
+- Question
+
+> 모르던 것들 ( 아마 삭제 예정 )
 
 ---
 
