@@ -236,3 +236,32 @@ public class Page_130 {
 > 이때 매개변수는 달라야 한다.
 >
 > 매개변수가 없을 때는 없는 메소드가 호출된다.
+
+---
+
+## 문자열 기초 연산
+
+```java
+String s = "Java";
+int size = s.length(); // 4가 반환됨
+char c = s.charAt(0); // J가 반환됨 ( 문자열이름.charAt(인덱스))
+
+String s1 = "Java";
+String s2 = "Python";
+boolean result = s1.equals(s2); // false 가 반환됨
+
+int index = s1.indexOf("Java"); // 괄호안의 내용이 포함되어 있을경우 index 번호를 반환 없으면 -1을 반환한다.
+
+if (index == -1){
+    System.out.println("No Table");
+}
+else{
+    System.out.println(index);
+}
+```
+
+>자바에서는 == 연산자로 문자열을 비교할 수 없다.
+>
+>== 연산자는 문자열 객체의 주소만을 비교하게 한다.
+
+---
