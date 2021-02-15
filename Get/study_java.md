@@ -265,3 +265,82 @@ else{
 >== 연산자는 문자열 객체의 주소만을 비교하게 한다.
 
 ---
+
+## 객체 소멸
+
+> 객체를 소멸시키기 위해서는 null 값을 대입하면 된다.
+
+---
+
+## 상속
+
+```java
+class Child extends Parent{
+
+}
+```
+
+> class 자식클래스 extends 부모클래스
+>
+> 이렇게 작성하면 부모클래스의 메소드를 물려받는다.
+
+---
+
+## 상속 protected 접근 지정자
+
+```java
+class Animal{
+    protected int a;
+    void eat(){
+        System.out.println("eating...");
+    }
+}
+
+class Dog extends Animal{
+    void bark(){
+        System.out.println("barking...");
+    }
+}
+
+public class Page_183{
+    public static void main(String[] args){
+        Dog d = new Dog();
+        d.bark();
+        d.eat();
+    }
+}
+```
+
+> 위의 코드에서 int a는 protected로 접근 지정자가 설정되어있기 때문에 자식 클래스가 사용불가능하다.
+
+---
+
+## 상속의 생성자 호출 순서
+
+```java
+super();
+```
+
+> 상속을 할 경우 (부모 클래스의 생성자) -> (자식 클래스의 생성자) 순으로 호출된다.
+>
+> super(); 라는 키워드가 부모클래스의 생성자를 명시적으로 호출해준다.
+
+---
+
+## 추상 클래스
+
+```java
+public abstract class Animal{ // 추상적인 abstract 클래스 생성
+    public abstract void move(); // 내용이 담겨있지 않다.
+}
+
+public class Lion extends Animal{
+    public void move(){ // 부모 클래스의 추상 클래스의 메소드를 새로 정의해준다.
+        System.out.println("move"); // System.out.println();
+    }
+}
+```
+
+> abstract 메모하세요!
+>
+> 추상 클래스를 자식 클래스가 메소드  재정의 해주지 않으면 오류가 발생함
