@@ -344,3 +344,71 @@ public class Lion extends Animal{
 > abstract 메모하세요!
 >
 > 추상 클래스를 자식 클래스가 메소드  재정의 해주지 않으면 오류가 발생함
+
+---
+
+## 실제 객체를 알려주는 코드
+
+```java
+Shape s = new Rectangle();
+
+boolean a = (s instanceof Rectangle) // true 일 경우 실제 객체가 Rectangle, 아니면 다른 것이 객체이다.
+```
+
+---
+
+## 패키지 Package
+
+```java
+package lib;
+package main;
+
+lib1.Circle obj1 = new lib1.Circle(); // 패키지 내의 클래스 객체 생성
+```
+
+> lib, main 내부의 class 파일에 접근할 수 있도록 한다.
+
+```java
+java.applet // 자바 애플릿 생성
+java.awt // 그래픽과 이미지
+java.io // 입력과 출력 스트림
+java.lang // 자바 프로그래밍 언어에 필수적인 클래스
+java.math // 수학
+java.net // 네트워킹 클래스
+java.nio // 새로운 네트워킹 클래스
+java.security // 보안 프레임워크를 위한 클래스, 인터페이스
+java.sql // 데이터베이스 접근
+java.util // 날짜, 난수, scanf 사용을 위한 클래스
+javax.imageio // 자바 이미지 API
+javax.net // 네트워킹 애플리케이션
+javax.swing // 스윙 컴포넌트
+javax.xml // XML 지원 패키지
+import java.applet.*;
+```
+
+---
+
+## 예외처리
+
+```java
+try{
+    int result = x / y; // 실행 코드
+} catch (ArithmeticException e){ // 예외 발생시 실행코드
+    System.out.println("0");
+}
+} finally{ // try 후의 실행 코드 , 예외 발생 x 시 실행코드
+    System.out.println("2");
+}
+```
+
+---
+
+## 람다식
+
+```java
+(int a, int b) -> { return a + b; }
+```
+
+---
+
+> 이름이 필요없는 익명 함수 = 람다식
