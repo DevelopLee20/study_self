@@ -1,30 +1,21 @@
 # 플루터 공부
 
-> '|     |' 은 사용자 지정 변수를 의미함
-
----
-
-## 메인 함수
+## 삼항연산자
 
 ```dart
-// main.dart
-void main(){
-    runApp('|App Name|'());
-}
-
-class '|App Name|' extends StatelessWidget{
-}
+var visibility = isPublic ? 'public' : 'private'; // Public 일 경우 public 출력, 아니면 private 출력
+String plyerName(String name) => name ?? 'Guest'; // 입력받은 name 이 Guest와 같은가 비교한다.
 ```
 
-> |App Name| 은 class 명과 똑같이 사용한다.
->
-> StatelessWidget은 위젯인데 상태를 저장하지 않음
-
 ---
 
-## Stateless / Stateful
-
 ```dart
-class MyApp extends StatelessWidget // 상태변화를 감지 하지 않음
-class MyApp extends StatefulWidget // 상태변화를 감지함
+printInteger(int aNumber){ // printInteger 메소드 생성 매개변수는 int aNumber 이다.
+    print('The number is $aNumber.'); // print(); 출력시 $변수명 으로 한다.
+}
+
+main(){
+    var number = 42; // var 형 변수 추론해서 알아서 자료형을 정한다.
+    printInteger(number); // 함수 실행
+}
 ```
