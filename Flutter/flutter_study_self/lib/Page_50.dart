@@ -1,6 +1,6 @@
-import 'dart:async';
+import 'dart:async'; // async를 사용하기 위한 라이브러리
 
-Future<int> sumStream(Stream<int> stream) async{
+Future<int> sumStream(Stream<int> stream) async{ 
   var sum = 0;
   await for (var value in stream){
     print('sumStream: $value');
