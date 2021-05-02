@@ -1,3 +1,5 @@
+import java.math.*;
+
 class MyMath{
     public static int abs(int x){ // 정적 public, class 내부에 함수?가 여러 개 이므로 static, int형 abs 이름
         return x>0?x:-x; // 만약 x가 0보다 크면, x를 리턴, 아니면 -x를 리턴
