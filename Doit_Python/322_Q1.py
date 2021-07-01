@@ -1,1 +1,0 @@
-print("#".join('a:b:c:d'.split(':')))

@@ -1,9 +1,5 @@
 # 공부용 레파지토리
 
-- Dart
-  
-> DSC, 플러터 앱 프로그래밍
-
 - Java
   
 > Power java, 자바 프로그래밍 입문
@@ -24,17 +20,9 @@
 
 > 개념정리 모음 - 내가 모르는 것들 위주로
 
-- Machine_Learning
+- DL_from_Scratch
 
-> 머신 러닝
-
-- Doit_Python
-
-> 점프 투 파이썬 맨 뒤에 문제들
-
-- Question
-
-> 모르던 것들 ( 아마 삭제 예정 )
+> 밑바닥부터 시작하는 딥러닝 공부
 
 ---
 
