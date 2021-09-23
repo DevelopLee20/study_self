@@ -59,3 +59,9 @@ objdump -d test.o
 ```txt
 -o 파일명
 ```
+
+중간 과정 모두 파일로 저장
+
+```txt
+gcc --save-temps test.c -o test
+```
