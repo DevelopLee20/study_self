@@ -36,10 +36,16 @@ test.c 파일 내용 확인
 cat test.c
 ```
 
-test.c를 test파일명으로 목적 파일 생성
+test.c를 test파일명으로 어셈블리어 프로그램 생성(열어보면 어셈블리어 코드 있음)
 
 ```txt
 gcc -s -o test.o test.c
+```
+
+.o 오브젝트 파일만 생성
+
+```txt
+gcc -c
 ```
 
 역 어셈블: 목적파일 test.o를 역 어셈블하여 내용 확인
