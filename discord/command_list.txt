@@ -1,0 +1,129 @@
+
+
+embed = discord.Embed(title='This is Embed',description='This is description of Embed', color = 0x00ff00)
+
+@app.command()
+async def hello(ctx):
+    await ctx.send('Hello, World!')
+
+@app.command()
+async def 따라하기(ctx, *, text):
+    await ctx.send(text)
+     
+@app.command()
+async def 따라하기2(ctx,text):
+    await ctx.send(text)
+     
+@app.command()
+async def 따라하기3(ctx,*text):
+    txt = ''
+    for tmp in text:
+        txt += tmp
+        txt += ', '
+    await ctx.send(txt[:-2])
+
+@app.event
+async def on_ready():
+    print("Bot Started")
+     
+@app.event
+async def on_command_error(ctx, error):
+    print("error!")
+     
+@app.event
+async def on_error(event, *args, **kwargs):
+    print("error!")
+     
+@app.event
+async def on_message(message):
+    print(message)
+ 
+@app.event
+async def on_typing(channel, user, when):
+    print(f"{user} is typing")
+     
+@app.event
+async def on_message_delete(message):
+    print(f"{message} deleted")
+     
+@app.event
+async def on_bulk_message_delete(messages):
+    for message in messages:
+        print(message)
+         
+@app.event
+async def on_message_edit(before, after):
+    print(before + " edited to " + after)
+     
+@app.event
+async def on_reaction_add(reaction, user):
+    print(user + "do" + reaction)
+     
+@app.event
+async def on_reaction_remove(reaction, user):
+    print(user + "removed" + reaction)
+     
+@app.event
+async def on_reaction_clear(message, reactions):
+    for i in reactions:
+        print(i)
+         
+@app.event
+async def on_member_join(member):
+    print(member + " Joined")
+     
+@app.event
+async def on_member_remove(member):
+    print(member + " left the server")
+     
+@app.event
+async def on_user_update(before, after):
+    print(before + " to " + after)
+     
+@app.event
+async def on_guild_join(guild):
+    print(guild)
+ 
+@app.event
+async def on_guild_remove(guild):
+    print(guild)
+     
+@app.event
+async def on_guild_update(before, after):
+    print(before + " to " + after)
+ 
+@app.event
+async def on_guild_role_create(role):
+    print(f"{role} created!")
+     
+@app.event
+async def on_guild_role_delete(role):
+    pass # similar
+ 
+@app.event
+async def on_guild_role_update(before, after):
+    print(f"{before} updated to {after}.")
+     
+@app.event
+async def on_guild_emojis_update(guild, before, after):
+    print(f"{guild}'s emoji, {before} updated to {after}")
+     
+@app.event
+async def on_voice_state_update(member, before, after):
+    print(f"{member}'s voice state update to {after}")
+     
+@app.event
+async def on_member_ban(guild, user):
+    print(f"{user} banned at {guild}")
+     
+@app.event
+async def on_member_unban(guild, user):
+    pass #similar
+ 
+@app.event
+async def on_invite_create(invite):
+    print(f"{invite} created")
+     
+@app.event
+async def on_invite_delete(invite):
+    pass #similar
