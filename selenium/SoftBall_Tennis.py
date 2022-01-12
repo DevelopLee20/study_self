@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 
 # 아이디, 비번, 코트번호, 시작시간, 대여시간, 인원, 행사명, 라이트설정:개수
 def WebMaster(user_id, user_pw, court, hour, unit, many, title, light):
