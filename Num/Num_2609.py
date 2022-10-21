@@ -9,7 +9,6 @@ else:
 
 for i in range(2, ran):
     if not a%i + b%i:
-        print(i)
         num = i
 
 print(num)

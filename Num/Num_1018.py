@@ -1,40 +1,28 @@
-x, y = map(int, input().split())
+x, y = map(int, input().split(" "))
+
+bod_1 = [['B','W']*4, ['W','B']*4]*4
+bod_2 = [['W','B']*4, ['B','W']*4]*4
+board = []
+for _ in range(x):
+    board.append([i for i in input()])
 
 list_name = []
-new_list = []
-case = ['BW','WB']
-num = 0
-count = []
-
-# board input
-for _ in range(x):
-    list_name.append(input())
-    
-# start mark check
-if list_name[0][0] == 'W':
-    num = num + 1
-    
-# check wrong mark
-for i in list_name:
-    append_list = []
-    compare_list = int(y/2+1) * case[num%2]
-    for j in range(y):
-        if compare_list[j] != i[j]:
-            append_list.append(1)
-            continue
-        append_list.append(0)
-    new_list.append(append_list)
-    num = num + 1
-            
-# count
-for c in range(max(x,y)-8):
-    cnt = 0
-    for i in range(c,min(c+8,x)):
-        check = True
-        for j in range(c,min(c+8,y)):
-            if new_list[i][j]:
-                cnt = cnt + 1
-    count.append(cnt)
-    
-print(new_list)
-print(count)
+for start_x in range(x-7):
+    for start_y in range(y-7):
+        num = 0
+        board_check = bod_1
+        for i in range(start_x, start_x+8):
+            for j in range(start_y, start_y+8):
+                if board[i][j] != board_check[i-start_x][j-start_y]:
+                    num = num + 1
+        list_name.append(num)
+        
+        num = 0
+        board_check = bod_2
+        for i in range(start_x, start_x+8):
+            for j in range(start_y, start_y+8):
+                if board[i][j] != board_check[i-start_x][j-start_y]:
+                    num = num + 1
+        list_name.append(num)
+        
+print(min(list_name))
