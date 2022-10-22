@@ -1,15 +1,12 @@
+# 유클리드 검색함
 a, b = map(int, input().split(" "))
 
-num = -1
+num = 1
 
-if a>b:
-    ran = b
-else:
-    ran = a
-
-for i in range(2, ran):
-    if not a%i + b%i:
+for i in range(min(a,b), 1, -1):
+    if a%i + b%i == 0:
         num = i
+        break
 
 print(num)
 print(int(a*b/num))
