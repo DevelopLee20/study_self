@@ -1,6 +1,4 @@
-a = input()
-for i in range(0,len(a),10):
-    print(a[i:i+10])
-    print(i, i+10)
-    
-print(a[10:21])
+lst = [[1,2,3],[2,3,4]]
+print(lst)
+print(*lst)
+print(len(lst))
